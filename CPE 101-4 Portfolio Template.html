@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio | CPE 101-4</title>
+<style>
+:root{--bg:#f7f8fa;--surface:#fff;--text:#1d2433;--muted:#5b6578;--line:#dde1e8;--accent:#062f6b;--accent-ink:#fff;--bar:#12203a;--bar-text:#e8edf7;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1420;--surface:#171d2c;--text:#e6eaf3;--muted:#9aa5bb;--line:#283046;--accent:#1c3b70;--accent-ink:#0b1220;--bar:#0a0f1a;--bar-text:#e6eaf3}}
+:root[data-theme="dark"]{--bg:#0f1420;--surface:#171d2c;--text:#e6eaf3;--muted:#9aa5bb;--line:#283046;--accent:#6ea2ff;--accent-ink:#0b1220;--bar:#0a0f1a;--bar-text:#e6eaf3}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;line-height:1.65}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bar);color:var(--bar-text);border-bottom:1px solid var(--line)}
+nav{max-width:960px;margin:auto;display:flex;align-items:center;gap:6px;padding:10px 20px;flex-wrap:wrap}
+nav .brand{font-weight:700;margin-right:auto;color:var(--bar-text);text-decoration:none}
+nav a.link{color:var(--bar-text);text-decoration:none;padding:6px 12px;border-radius:6px;opacity:.85}
+nav a.link:hover,nav a.link.on{opacity:1;background:rgba(255,255,255,.14)}
+nav button{background:none;border:1px solid rgba(255,255,255,.35);color:var(--bar-text);border-radius:6px;padding:5px 10px;cursor:pointer;font:inherit}
+main{max-width:960px;margin:auto;padding:0 20px 60px}
+section{padding:56px 0 8px}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin:0 0 12px}
+h2{font-size:1.6rem;margin:0 0 20px;padding-bottom:8px;border-bottom:2px solid var(--accent);display:inline-block}
+h3{margin:0 0 6px;font-size:1.1rem}
+p{max-width:68ch}
+.muted{color:var(--muted)}
+.hero{display:grid;grid-template-columns:180px 1fr;gap:32px;align-items:center;padding-top:48px}
+.photo{width:180px;height:180px;border-radius:50%;background:var(--line);border:4px solid var(--accent);display:grid;place-items:center;color:var(--muted);font-size:.85rem;text-align:center;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);text-decoration:none;padding:10px 18px;border-radius:6px;font-weight:600;margin:8px 8px 0 0}
+.btn.alt{background:none;color:var(--accent);border:1px solid var(--accent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:20px}
+.card .thumb{height:240px;border-radius:6px;background:var(--line);margin-bottom:14px;display:grid;place-items:center;color:var(--muted);font-size:.85rem;overflow:hidden}
+.card .thumb img{width:100%;height:100%;object-fit:contain}
+.tag{display:inline-block;font-size:.78rem;border:1px solid var(--line);border-radius:99px;padding:1px 10px;margin:6px 6px 0 0;color:var(--muted)}
+.bar{height:8px;background:var(--line);border-radius:4px;margin:6px 0 14px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--accent)}
+.tl{border-left:2px solid var(--line);padding-left:20px}
+.tl div{margin-bottom:18px;position:relative}
+.tl div::before{content:"";position:absolute;left:-27px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+footer{text-align:center;padding:28px 20px;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+@media (max-width:640px){.hero{grid-template-columns:1fr;text-align:center}.photo{margin:auto}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><nav aria-label="Main">
+  <a class="brand" href="#home">CPE101-4 Portfolio</a>
+  <a class="link" href="#about">About</a>
+  <a class="link" href="#skills">Skills</a>
+  <a class="link" href="#project">Projects</a>
+  <a class="link" href="#contact">Contact</a>
+  <button id="theme" aria-label="Toggle dark mode">Theme</button>
+</nav></header>
+
+<main>
+<section id="home" class="hero">
+  <div class="photo"><span><img src="5r.jpg" alt="User profile picture"></span></div>
+  <div>
+    <p class="muted" style="margin:0">CPE 101-4 · Academic Portfolio</p>
+    <h1>Hi, I'm Cruz Jr., Marlon Xavier M.</h1>
+    <p>First year Computer Engineering student at Mapua University. I build small projects, learn by doing, and keep this page as a record of my work.</p>
+    <a class="btn" href="#project">View projects</a><a class="btn alt" href="#contact">Contact me</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About me</h2>
+  <p>I am an eager learner. I love to try new things, make mistakes, and to trust the process. I fell in love with Computer Engineering when I started participating in programing and robotics workshops and competitions. After greaduating, I hope to become the person that i imagine myself to be and to have the means to spread kindnesss.</p>
+  <h3 style="margin-top:24px">Education</h3>
+  <div class="tl">
+    <div><strong>BS Computer Engineering</strong><br><span class="muted">Mapua University · 2025 to present</span></div>
+    <div><strong>Senior High School, STEM Strand</strong><br><span class="muted">St. Joseph's Academy of Las Pinas · 2023 to 2025</span></div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card"><h3>Programming</h3><div class="bar"><i style="width:40%"></i></div><p class="muted" style="margin:0">Python, C, HTML/CSS</p></div>
+    <div class="card"><h3>Electronics</h3><div class="bar"><i style="width:65%"></i></div><p class="muted" style="margin:0">Arduino, breadboarding, basic circuits</p></div>
+    <div class="card"><h3>Tools</h3><div class="bar"><i style="width:55%"></i></div><p class="muted" style="margin:0">Git, VS Code, Microsoft Office</p></div>
+  </div>
+</section>
+
+<section id="course works">
+  <h2>Course Works</h2>
+  <div class="grid">
+    <article class="card"><div class="thumb"><img src="CW1.png" alt="Project 1 screenshot" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div><h3>CW1</h3><p class="muted">Created a comprehensive infograohic that illustrayes the potential impact of a selected course in Computer Engineering. I selected Embedded Systems Design & Edge AI as my topic.</p><span class="tag">Canva</span><span class="tag">Course project</span><p><a href="https://drive.google.com/file/d/1kTc0_XGaNhqpJWydIf0t3qq97CcU-NUL/view?usp=sharing" target="_blank" rel="noopener">View project</a></p></article>
+    <article class="card"><div class="thumb"><img src="CW2.png" alt="Project 1 screenshot" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div><h3>CW2</h3><p class="muted">Evaluated the hardware and software architecture of an embedded Edge AI smart camera system designed for real-time, localized object detection without cloud reliance. Applied the Engineering Design Process to analyze critical constraints—including sub-15W power consumption, passive thermal dissipation, and INT8 model quantization—highlighting energy-efficient hardware-software co-design.</p><span class="tag">Essay</span><span class="tag">Hardware</span><p><p><a href="https://drive.google.com/file/d/1FycdcN7c3pb4lDv1ymJ_ncFe0Tlt-rk2/view?usp=sharing" target="_blank" rel="noopener">View project</a></p></article>
+    <article class="card"><div class="thumb"><img src="CW3.png" alt="Project 1 screenshot" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div><h3>CW3</h3><p class="muted">Documents and demonstrates technical project execution and functional testing. It serves as visual media proof for hardware/software prototype validation, system demonstrations, or project presentations.</p><span class="tag">Edge AI</span><span class="tag">Web</span><p><p><a href="https://drive.google.com/file/d/1fyHxDfEAT2YwjaHtZ6rvClLiJIwhBuDT/view?usp=sharing" target="_blank" rel="noopener">View project</a></p></article>
+  </div>
+</section>
+
+<section id="project">
+  <h2>Projects</h2>
+  <div class="grid">
+    <article class="card"><div class="thumb"><img src="Capstone.png" alt="Project 1 screenshot" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div><h3>Capstone Research Project</h3><p class="muted">An audio-detected, automatic waste segragation machine my group and I made in senior high school.</p><span class="tag">Python</span><span class="tag">Raspberry Pi</span><span class="tag">Arduino</span><p><p><a href="https://drive.google.com/file/d/1JUzHDuUK_XzxqEUMrrkfjSoLnvX0dorf/view?usp=sharing" target="_blank" rel="noopener">View project</a></p></article>
+    <article class="card"><div class="thumb"><img src="Quakley.png" alt="Project 1 screenshot" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div><h3>Quakely</h3><p class="muted">A low-cost P-wave detection system for early residential earthquake warning.</p><span class="tag">Arduino</span><span class="tag">Hardware</span><p><a href="https://drive.google.com/file/d/1kiEmnTehaw6u8rW5_8GzaP626UhqZgTo/view?usp=sharing" target="_blank" rel="noopener">View project</a></p></article>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Questions or feedback? Reach me here.</p>
+  <p><strong>Email:</strong> <a href="mailto:mxmcruz@mymail.mapua.edu.ph">mxmcruz@mymail.mapua.edu.ph</a><br>
+  <strong>GitHub:</strong> <a href="#">https://github.com/Xaviexe</a><br>
+  <strong>Facebook / LinkedIn:</strong> <a href="#">https://www.facebook.com/marlonxavier.cruz</a></p>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Cruz Jr., Marlon Xavier M. · CPE 101-4 Portfolio</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var links=[].slice.call(document.querySelectorAll('nav a.link'));
+var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+function mark(){var y=window.scrollY+120,cur=0;secs.forEach(function(s,i){if(s.offsetTop<=y)cur=i});links.forEach(function(a,i){a.classList.toggle('on',i===cur)})}
+window.addEventListener('scroll',mark);mark();
+document.getElementById('theme').onclick=function(){var r=document.documentElement,d=r.getAttribute('data-theme');
+var dark=d?d==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.setAttribute('data-theme',dark?'light':'dark')};
+</script>
+</body>
+</html>
